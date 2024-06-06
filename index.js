@@ -16,3 +16,24 @@ const book2 = new Book('The Silmarillion', 'John Ronald Reuel Tolkien', '365', '
 addBookToLibrary(book1, book2);
 console.log(myLibrary);
 
+const list = document.querySelector('.book-list');
+
+const ul = document.createElement('ul');
+ul.setAttribute('class', 'list');
+
+function updateList () {
+  myLibrary.forEach((item) => {
+    const book = document.createElement('li');
+    book.setAttribute('class', 'book');
+
+    const name = document.createElement('p');
+    name.innerText = `${item.title}`;
+
+    book.append(name);
+
+    ul.append(book);
+    list.append(ul);
+  });
+};
+
+updateList();
