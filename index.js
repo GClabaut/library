@@ -91,11 +91,12 @@ document.querySelector('.close').addEventListener('click', () => {
 
 document.querySelector('.create-book').addEventListener('click', (e) => {
   e.preventDefault;
+  console.log(dialog)
   const newBook = {
-    title: dialog.children[1].lastElementChild.value,
-    author: dialog.children[2].lastElementChild.value,
-    page: dialog.children[3].lastElementChild.value,
-    reading: `${reading.checked}`,
+    title: dialog.children[1].children[0].lastElementChild.value,
+    author: dialog.children[1].children[1].lastElementChild.value,
+    page: dialog.children[1].children[2].lastElementChild.value,
+    reading: `${!reading.checked}`,
   }
   addBookToLibrary(newBook);
   dialog.close();
