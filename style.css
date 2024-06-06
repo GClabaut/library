@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Alexandria;
+  src: url(./asset/font/Alexandria-Regular.woff2);
+}
+
+* {
+  font-family: Alexandria, sans-serif;
+}
+
+.create {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 6px;
+}
+
+.add-book {
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  border-style: none;
+  border-radius: 8px;
+  color: white;
+  background: dodgerblue;
+}
+
+ul {
+  list-style: none;
+}

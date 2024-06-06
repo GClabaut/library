@@ -37,3 +37,8 @@ function updateList () {
 };
 
 updateList();
+
+const newBook = document.querySelector('.add-book');
+newBook.addEventListener('click', () => {
+  console.log('create')
+});
