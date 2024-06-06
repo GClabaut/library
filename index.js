@@ -29,7 +29,7 @@ function readStatus (item, book) {
 }
 
 function removeBook(book) {
-  book.parentElement.remove();
+  book.parentElement.parentElement.remove();
 }
 
 function updateList () {

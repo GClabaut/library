@@ -14,24 +14,27 @@
 
   <div class="create">
     <dialog>
-      <button autofocus class="close">X</button>
-      <div class="input">
-        <label for="book-name">Book name:</label>
-        <input type="text" name="book-name" id="book-name" pattern="^[a-zA-Z0-9]+" required>
+      <div class="close-btn"><button autofocus class="close">X</button>
       </div>
-      <div class="input">
-        <label for="author">Author:</label>
-        <input type="text" name="author" id="author" pattern="^[a-zA-Z0-9]+" required>
+      <div class="content">
+        <div class="input">
+          <label for="book-name">Book name:</label>
+          <input type="text" name="book-name" id="book-name" pattern="^[a-zA-Z0-9]+" required>
+        </div>
+        <div class="input">
+          <label for="author">Author:</label>
+          <input type="text" name="author" id="author" pattern="^[a-zA-Z0-9]+" required>
+        </div>
+        <div class="input">
+          <label for="page">Page:</label>
+          <input type="text" name="page" id="page" pattern="^[a-zA-Z0-9]+" required>
+        </div>
+        <div class="input">
+          <label for="reading">Finished:</label>
+          <input type="checkbox" name="reading" id="reading">
+        </div>
       </div>
-      <div class="input">
-        <label for="page">Page:</label>
-        <input type="text" name="page" id="page" pattern="^[a-zA-Z0-9]+" required>
-      </div>
-      <div class="input">
-        <label for="reading">Finished:</label>
-        <input type="checkbox" name="reading" id="reading">
-      </div>
-      <button class="create-book">Create</button>
+      <div class="create-btn"><button class="create-book">Create</button></div>
     </dialog>
     <button class="add-book">Add a new book</button>
   </div>

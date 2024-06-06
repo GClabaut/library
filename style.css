@@ -79,6 +79,61 @@ ul li:last-child {
   padding: 6px 10px;
 }
 
+dialog {
+  border-style: none;
+  border-radius: 20px;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 16px;
+}
+
+.close {
+  border-style: none;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.content {
+  display: grid;
+  gap: 16px;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.input > input {
+  border-style: none;
+  border-radius: 50px;
+  background-color: #e6e6e6;
+  width: 85%;
+  height: 30px;
+  padding: 10px 10px 10px 25px;
+  /* padding-left: 25px; */
+}
+
+.input:last-child {
+  height: 30px;
+}
+
+.input > input:last-child {
+  height: 20px;
+}
+
+.create-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.create-book {
+  margin-top: 16px;
+}
+
 ::backdrop {
   background-color: black;
   opacity: 50%;
