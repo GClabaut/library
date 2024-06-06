@@ -7,6 +7,20 @@
   font-family: Alexandria, sans-serif;
 }
 
+.rm-book {
+  width: 32px;
+  height: 32px;
+  background-color: #dc3545;
+  border-style: none;
+  border-radius: 8px;
+  
+}
+
+.rm-book > svg {
+  padding-top: 3px;
+  fill: white
+}
+
 .create {
   display: flex;
   justify-content: center;
