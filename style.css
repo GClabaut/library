@@ -7,14 +7,22 @@
   font-family: Alexandria, sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 ul {
   list-style: none;
+  margin: 32px;
   padding: 0;
   border: 1px solid black;
   border-radius: 25px;
 }
 
 ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 8px 16px;
   border-bottom: 1px solid black;
 }
@@ -23,18 +31,36 @@ ul li:last-child {
   border-bottom: none
 }
 
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
 .rm-book {
   width: 32px;
   height: 32px;
   background-color: #dc3545;
   border-style: none;
   border-radius: 8px;
-  
 }
 
 .rm-book > svg {
   padding-top: 3px;
   fill: white
+}
+
+.read-book {
+  width: 32px;
+  height: 32px;
+  background-color: dodgerblue;
+  border-style: none;
+  border-radius: 8px;
+}
+
+.read-book > svg {
+  padding-top: 3px;
+  fill: white;
 }
 
 .create {
