@@ -22,6 +22,7 @@ const ul = document.createElement('ul');
 ul.setAttribute('class', 'list');
 
 function updateList () {
+  ul.textContent = '';
   myLibrary.forEach((item) => {
     const book = document.createElement('li');
     book.setAttribute('class', 'book');
@@ -38,7 +39,26 @@ function updateList () {
 
 updateList();
 
+const dialog = document.querySelector('dialog');
+
 const newBook = document.querySelector('.add-book');
 newBook.addEventListener('click', () => {
-  console.log('create')
+  dialog.showModal();
 });
+
+document.querySelector('.close').addEventListener('click', () => {
+  dialog.close();
+})
+
+document.querySelector('.create-book').addEventListener('click', (e) => {
+  e.preventDefault;
+  const newBook = {
+    title: dialog.children[1].lastElementChild.value,
+    author: dialog.children[2].lastElementChild.value,
+    page: dialog.children[3].lastElementChild.value,
+    reading: `${reading.checked}`,
+  }
+  addBookToLibrary(newBook);
+  dialog.close();
+  updateList();
+})
