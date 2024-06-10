@@ -28,7 +28,8 @@ function readStatus (item, book) {
   }
 }
 
-function removeBook(book) {
+function removeBook(item, number, book) {
+  item.splice(number);
   book.parentElement.parentElement.remove();
 }
 
@@ -60,11 +61,12 @@ function updateList () {
     list.append(ul);
   });
 
-  document.querySelectorAll('.rm-book').forEach((book) => {
-    book.addEventListener('click', () => {
-      removeBook(book);
+  const removeButton = document.querySelectorAll('.rm-book')
+  for (let i = 0; i < removeButton.length; i++) {
+    removeButton[i].addEventListener('click', () => {
+      removeBook(myLibrary, i, removeButton[i]);
     });
-  });
+  };
 
   const newStatus = document.querySelectorAll('.read-book')
   for (let i = 0; i < newStatus.length; i++) {
